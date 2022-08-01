@@ -1,18 +1,19 @@
 import { ReactNode } from "react";
-import Footer from "../Footer";
+import Components from "../index"
 
-type LayoutProps = {
+type Props = {
     children: ReactNode
 }
 
-export const Layout = ({ children }: LayoutProps) => {
+export const Content = ({ children }: Props) => {
     return (
         <>
             <div className="min-h-screen">
                 <main>{children}</main>
             </div>
-            <Footer />
+            <Components.Footer.Content />
         </>
     )
 }
 
+export default Content
