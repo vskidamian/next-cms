@@ -5,17 +5,18 @@ const _navigationLinks = [{ path: '/offer', label: 'Oferta' }, { path: '/contact
 
 export const Content = () => {
     const router = useRouter();
-    console.log(router);
+
     return (
-        <div className="flex items-center flex-1">
+        <div className="flex items-center flex-1 ml-auto mr-24 justify-end">
             {_navigationLinks.map((link, index) => (
-                <h3 className="text-xl ml-10 leading-5" key={index}>
+                <h3 className={`text-xl ml-16 leading-5 ${router.pathname === link.path && 'underline underline-offset-[-20px] text-primary dark:text-primaryDark'}`} key={index} >
                     <Link href={link.path}>
                         <a>{link.label}</a>
                     </Link>
                 </h3>
-            ))}
-        </div>
+            ))
+            }
+        </div >
     )
 }
 
