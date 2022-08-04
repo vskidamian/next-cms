@@ -5,7 +5,8 @@ import * as Layout from './Layout';
 import * as Switch from './Switch';
 import * as ThemeSwitch from './ThemeSwitch';
 import * as Navigation from './Navigation';
+import * as Breadcrumb from './Breadcrumb';
 
 export default {
-    Container, Footer, Header, Layout, Switch, ThemeSwitch, Navigation
+    Container, Footer, Header, Layout, Switch, ThemeSwitch, Navigation, Breadcrumb
 } 

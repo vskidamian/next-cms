@@ -3,8 +3,11 @@ import type { AppProps } from "next/app";
 import { ThemeProvider } from "next-themes";
 import Components from '../components';
 import ErrorPage from 'next/error'
+import { useRouter } from 'next/router'
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+  console.log(router);
   if (pageProps?.statusCode === 404) {
     return <ErrorPage statusCode={pageProps.statusCode} />
   }
