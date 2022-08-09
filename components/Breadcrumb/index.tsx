@@ -1,13 +1,13 @@
 import Link from "next/link";
-import Components from "../index";
 import { HomeIcon, ChevronRightIcon } from '@heroicons/react/solid'
 import { useRouter } from 'next/router'
+import { useTranslation } from "next-i18next";
 
 export const Content = () => {
+    const { t } = useTranslation(['common']);
+
     const router = useRouter();
     const breadcrumb = router.pathname.split('/').slice(1);
-
-    console.log(router);
 
     return (
         <nav className="flex pt-3.5 pb-7">
@@ -16,22 +16,22 @@ export const Content = () => {
                     <Link href="/">
                         <a className="inline-flex items-center text-sm">
                             <HomeIcon className="h-5 w-5 mr-2 text-primary dark:text-primaryDark" />
-                            Strona główna
+                            {t('home-page')}
                         </a>
                     </Link>
                 </li>
                 {breadcrumb && breadcrumb.map((name, index, bc) => (
-                    <li>
+                    <li key={index}>
                         <div className="flex items-center">
-                            <ChevronRightIcon className='h-6 w-6' />
+                            <ChevronRightIcon className='h-5 w-5 text-gray-400' />
                             {index + 1 === bc.length ? (
                                 <span className="ml-1 text-base font-medium  text-primary dark:text-primaryDark">
-                                    {name && name[0].toUpperCase() + name.slice(1)}
+                                    {name && t(name)}
                                 </span>
                             ) : (
                                 <Link href={`/${name}`}>
                                     <a className="ml-1 text-base">
-                                        {name && name[0].toUpperCase() + name.slice(1)}
+                                        {name && t(name)}
                                     </a>
                                 </Link>
                             )}
@@ -42,5 +42,6 @@ export const Content = () => {
         </nav >
     );
 };
+
 
 export default Content
