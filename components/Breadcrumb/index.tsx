@@ -39,7 +39,7 @@ export const Content = () => {
                     </li>
                 ))}
             </ol>
-        </nav >
+        </nav>
     );
 };
 
