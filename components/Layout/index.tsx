@@ -10,8 +10,8 @@ export const Content = ({ children }: Props) => {
         <>
             <div className="min-h-screen">
                 <main>{children}</main>
+                <Components.Footer.Content />
             </div>
-            <Components.Footer.Content />
         </>
     )
 }

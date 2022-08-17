@@ -26,7 +26,7 @@ export const Content = () => {
         <Switch
             checked={checked}
             onChange={handleSwitchChange}
-            className={`${checked ? 'bg-primaryDark' : 'bg-primary'} relative h-6 w-11 items-center rounded-full hidden sm:inline-flex`}
+            className={`${checked ? 'bg-primaryDark' : 'bg-primary'} relative h-6 w-11 items-center rounded-full hidden md:inline-flex`}
         >
             <span
                 className={`${checked ? 'translate-x-6' : 'translate-x-1'
