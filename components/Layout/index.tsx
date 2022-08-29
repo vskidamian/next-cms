@@ -8,7 +8,7 @@ type Props = {
 export const Content = ({ children }: Props) => {
     return (
         <>
-            <div className="min-h-screen">
+            <div className="min-h-screen ">
                 <main>{children}</main>
                 <Components.Footer.Content />
             </div>

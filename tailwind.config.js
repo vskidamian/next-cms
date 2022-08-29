@@ -8,6 +8,7 @@ module.exports = {
     colors: ({ colors }) => ({
       primary: '#7c3aed',
       primaryDark: '#a78bfa',
+      back: '#121212',
       inherit: colors.inherit,
       current: colors.current,
       transparent: colors.transparent,
@@ -36,6 +37,11 @@ module.exports = {
       pink: colors.pink,
       rose: colors.rose,
     }),
+    extend : {
+      backgroundImage: {
+        'colors': "url('../public/images/vector/bg.svg')"
+      }
+    }
   },
   typography: (theme) => ({}),
   extend: {},

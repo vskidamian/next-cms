@@ -3,6 +3,9 @@ import { Switch } from '@headlessui/react'
 import { useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
 
+type ContentProps = {
+    
+}
 
 export const Content = () => {
     const { theme, setTheme, resolvedTheme } = useTheme()

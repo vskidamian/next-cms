@@ -7,6 +7,8 @@ import * as ThemeSwitch from './ThemeSwitch';
 import * as Navigation from './Navigation';
 import * as Breadcrumb from './Breadcrumb';
 
-export default {
+const Components = {
     Container, Footer, Header, Layout, Switch, ThemeSwitch, Navigation, Breadcrumb
-} 
+}
+
+export default Components

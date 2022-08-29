@@ -15,7 +15,7 @@ export const Content = () => {
                 <li className="inline-flex items-center">
                     <Link href="/">
                         <a className="inline-flex items-center text-sm">
-                            <HomeIcon className="h-5 w-5 mr-2 text-primary dark:text-primaryDark" />
+                            <HomeIcon className="h-5 w-5 mr-2 text-primary" />
                             {t('home-page')}
                         </a>
                     </Link>
