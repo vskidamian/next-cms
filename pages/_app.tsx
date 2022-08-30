@@ -11,6 +11,8 @@ function MyApp({ Component, pageProps }: AppProps) {
     return <ErrorPage statusCode={pageProps.statusCode} />
   }
 
+  console.log(pageProps);
+
   return (
     <ThemeProvider attribute="class">
       <Components.Layout.Content>

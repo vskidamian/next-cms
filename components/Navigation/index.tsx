@@ -1,9 +1,10 @@
 import { useRouter } from 'next/router'
 import Link from "next/link";
 import { MenuAlt1Icon, XIcon } from '@heroicons/react/solid'
-import { useRef, Dispatch, SetStateAction } from 'react';
+import { useRef, Dispatch, SetStateAction, useMemo } from 'react';
+import Components from '..';
+import { useTranslation } from 'next-i18next';
 
-const _navigationLinks = [{ path: '/offer', label: 'Oferta' }, { path: '/contact', label: 'Kontakt' }];
 
 type ContentProps = {
     isActive: boolean;
@@ -14,6 +15,9 @@ type ContentProps = {
 export const Content = ({ handleClick, isActive, setIsActive }: ContentProps) => {
     const hamburger = useRef<SVGSVGElement>(null);
     const router = useRouter();
+    const { t } = useTranslation('common')
+
+    const _navigationLinks = useMemo(() => ([{ path: '/offer', label: 'Oferta' }, { path: '/contact', label: 'Kontakt' }]), []);
 
     return (
         <>
@@ -41,6 +45,9 @@ export const Content = ({ handleClick, isActive, setIsActive }: ContentProps) =>
                         </li>
                     ))
                     }
+                    <li>
+                        <Components.ThemeSwitch.Content showText left={t('light')} right={t('dark')}/>
+                    </li>
                 </ul>
             </div>
 

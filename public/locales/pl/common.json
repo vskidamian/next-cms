@@ -1,5 +1,7 @@
 {
     "home-page": "Strona główna",
     "contact": "Kontakt",
-    "offer": "Oferta"
+    "offer": "Oferta",
+    "dark": "Ciemny",
+    "light": "Jasny"
 }
