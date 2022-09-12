@@ -19,9 +19,9 @@ export const Content = () => {
   return (
     <Components.Container.Content>
       <div className="py-7 inline-flex w-full justify-between items-center">
-        <h2 className="text-2xl md:text-4xl font-bold tracking-tight z-50 md:tracking-tighter leading-tight">
+        <h2 className="text-2xl md:text-4xl md:leading-8 font-bold tracking-tight z-50 md:tracking-tighter">
           <Link href="/">
-            <a className="bg-clip-text text-transparent bg-gradient-to-r from-primaryDark to-primary" onClick={() => setActiveMenu(false)}>vski.damian</a>
+            <a className="bg-clip-text text-transparent bg-gradient-to-r from-primaryDark to-primary block" onClick={() => setActiveMenu(false)}>vski.damian</a>
           </Link>
         </h2>
         <Components.Navigation.Content isActive={activeMenu} setIsActive={setActiveMenu} handleClick={handleMenuBurgerClick} />

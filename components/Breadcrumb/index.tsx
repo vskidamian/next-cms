@@ -15,7 +15,7 @@ export const Content = () => {
                 <li className="inline-flex items-center">
                     <Link href="/">
                         <a className="inline-flex items-center text-sm">
-                            <HomeIcon className="h-5 w-5 mr-2 text-primary" />
+                            <HomeIcon className="h-6 w-6 mr-2 text-primary" />
                             {t('home-page')}
                         </a>
                     </Link>
@@ -23,14 +23,14 @@ export const Content = () => {
                 {breadcrumb && breadcrumb.map((name, index, bc) => (
                     <li key={index}>
                         <div className="flex items-center">
-                            <ChevronRightIcon className='h-5 w-5 text-gray-400' />
+                            <ChevronRightIcon className='h-5 w-5 mt-0.5 text-back dark:text-white' />
                             {index + 1 === bc.length ? (
-                                <span className="ml-1 text-base font-medium  text-primary dark:text-primaryDark">
+                                <span className="ml-2 text-base font-semibold text-primary dark:text-primaryDark">
                                     {name && t(name)}
                                 </span>
                             ) : (
                                 <Link href={`/${name}`}>
-                                    <a className="ml-1 text-base">
+                                    <a className="ml-2 text-base">
                                         {name && t(name)}
                                     </a>
                                 </Link>

@@ -23,9 +23,9 @@ export const Content = ({ handleClick, isActive, setIsActive }: ContentProps) =>
         <>
             <div className="hidden items-center flex-1 ml-auto mr-24 justify-end md:flex">
                 {_navigationLinks.map((link, index) => (
-                    <h3 className={`text-xl ml-16 leading-5 ${router.pathname === link.path && 'underline underline-offset-[-20px] text-primary dark:text-primaryDark'}`} key={index} >
+                    <h3 className={`text-xl ml-16 leading-8 ${router.pathname === link.path && 'underline underline-offset-[-20px] text-primary dark:text-primaryDark'}`} key={index} >
                         <Link href={link.path}>
-                            <a>{link.label}</a>
+                            <a className='block'>{link.label}</a>
                         </Link>
                     </h3>
                 ))
@@ -45,9 +45,6 @@ export const Content = ({ handleClick, isActive, setIsActive }: ContentProps) =>
                         </li>
                     ))
                     }
-                    <li>
-                        <Components.ThemeSwitch.Content showText left={t('light')} right={t('dark')}/>
-                    </li>
                 </ul>
             </div>
 

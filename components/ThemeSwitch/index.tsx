@@ -5,13 +5,8 @@ import { useTheme } from 'next-themes'
 
 import { SunIcon, MoonIcon } from '@heroicons/react/solid'
 
-type ContentProps = {
-    showText?: boolean;
-    left?: string;
-    right?: string;
-}
 
-export const Content = ({showText, left, right}: ContentProps) => {
+export const Content = () => {
     const { theme, setTheme, resolvedTheme } = useTheme()
 
     const [mounted, setMounted] = useState(false)
@@ -31,13 +26,10 @@ export const Content = ({showText, left, right}: ContentProps) => {
 
     return (
         <div className='flex items-center justify-between'>
-            {showText && left && (
-                <p>{left}</p>
-            )}
             <Switch
                 checked={checked}
                 onChange={handleSwitchChange}
-                className={`${checked ? 'bg-primaryDark' : 'bg-primary'} relative h-6 w-11 items-center rounded-full inline-flex`}
+                className={`${checked ? 'bg-primaryDark' : 'bg-primary'} relative h-6 w-11 items-center rounded-full hidden md:inline-flex`}
             >
                 <span
                     className={`${checked ? 'translate-x-5' : 'translate-x-1'
@@ -46,9 +38,6 @@ export const Content = ({showText, left, right}: ContentProps) => {
                         <MoonIcon className={`h-5 w-5 text-white transform transition ease-in-out duration-300 absolute ${checked ? 'opacity-0' : 'opacity-100'}`} />
                 </span>
             </Switch>
-            {showText && right && (
-                <p>{right}</p>
-            )}
         </div>
     )
 }
