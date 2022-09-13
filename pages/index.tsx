@@ -9,6 +9,7 @@ const Index: NextPage = () => {
   return (
     <Components.Container.Content>
       {t('home-page')}
+      <Components.Slider.Content />
     </Components.Container.Content>
   );
 };

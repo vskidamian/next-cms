@@ -6,9 +6,10 @@ import * as Switch from './Switch';
 import * as ThemeSwitch from './ThemeSwitch';
 import * as Navigation from './Navigation';
 import * as Breadcrumb from './Breadcrumb';
+import * as Slider from './Slider';
 
 const Components = {
-    Container, Footer, Header, Layout, Switch, ThemeSwitch, Navigation, Breadcrumb
+    Container, Footer, Header, Layout, Switch, ThemeSwitch, Navigation, Breadcrumb, Slider
 }
 
 export default Components
