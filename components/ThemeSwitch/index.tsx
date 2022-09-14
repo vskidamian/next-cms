@@ -25,7 +25,7 @@ export const Content = () => {
         return null
 
     return (
-        <div className='flex items-center justify-between'>
+        <div className='flex items-center justify-between pt-1'>
             <Switch
                 checked={checked}
                 onChange={handleSwitchChange}
