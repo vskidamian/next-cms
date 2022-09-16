@@ -1,7 +1,7 @@
 export const Content = () => {
     return (
-        <footer className="">
-
+        <footer className="w-full">
+            Stopka
         </footer>
     )
 }
